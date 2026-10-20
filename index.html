@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> AG Academy   | أكاديمية الكورسات</title>
+    <!-- استدعاء الخطوط والأيقونات -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. شريط التنقل العلوي (Navbar) -->
+    <header class="navbar">
+        <div class="logo">
+            <h2> AG  <span>Academy</span></h2>
+        </div>
+        <nav class="nav-links">
+            <a href="#home" class="active">الرئيسية</a>
+            <a href="#courses">الكورسات</a>
+            <a href="#features">مميزاتنا</a>
+            <a href="#contact">تواصل معنا</a>
+        </nav>
+        <div class="nav-actions">
+            <button class="cart-btn" id="open-cart-btn">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span class="cart-count" id="cart-count">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- 2. القسم الرئيسي (Hero Section) -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="badge">🚀 طوّر مهاراتك اليوم</span>
+            <h1>تعلم البرمجة والتكنولوجيا مع أفضل الكورسات التطبيقية</h1>
+            <p>دورات تدريبية متكاملة تأخذك من المستوى المبتدئ إلى الاحتراف مع مشاريع عملية.</p>
+            <div class="hero-buttons">
+                <a href="#courses" class="btn primary-btn">استكشف الكورسات 📚</a>
+                <a href="#contact" class="btn secondary-btn">تواصل معنا</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. قسم عرض الكورسات للبيع -->
+    <section class="courses-section" id="courses">
+        <div class="section-title">
+            <h2>الكورسات المتاحة</h2>
+            <p>اختر المسار المناسب لك وابدأ التعلم فوراً</p>
+        </div>
+
+        <div class="courses-grid">
+            <!-- كورس 1 -->
+            <div class="course-card">
+                <div class="course-img">
+                    <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500" alt="كورس Python">
+                    <span class="category-tag">البرمجة</span>
+                </div>
+                <div class="course-info">
+                    <h3>كورس Python الشامل من الصفر</h3>
+                    <p class="instructor"><i class="fa-solid fa-user-tie"></i> د. زياد فيصل</p>
+                    <div class="course-meta">
+                        <span><i class="fa-regular fa-clock"></i> 25 ساعة</span>
+                        <span><i class="fa-solid fa-star"></i> 4.9</span>
+                    </div>
+                    <div class="price">350 ج.م <span class="old-price">600 ج.م</span></div>
+                    <button class="add-to-cart" onclick="addToCart('كورس Python الشامل', 350, 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500')">
+                        اشترك الآن <i class="fa-solid fa-cart-plus"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- كورس 2 -->
+            <div class="course-card">
+                <div class="course-img">
+                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=500" alt="كورس Web Development">
+                    <span class="category-tag">تطوير المواقع</span>
+                </div>
+                <div class="course-info">
+                    <h3>احتراف Full-Stack Web Dev</h3>
+                    <p class="instructor"><i class="fa-solid fa-user-tie"></i> د. زياد فيصل</p>
+                    <div class="course-meta">
+                        <span><i class="fa-regular fa-clock"></i> 40 ساعة</span>
+                        <span><i class="fa-solid fa-star"></i> 5.0</span>
+                    </div>
+                    <div class="price">500 ج.م <span class="old-price">850 ج.م</span></div>
+                    <button class="add-to-cart" onclick="addToCart('احتراف Full-Stack Web Dev', 500, 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=500')">
+                        اشترك الآن <i class="fa-solid fa-cart-plus"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- كورس 3 -->
+            <div class="course-card">
+                <div class="course-img">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500" alt="كورس Data Science">
+                    <span class="category-tag">علم البيانات</span>
+                </div>
+                <div class="course-info">
+                    <h3>أساسيات علم البيانات والـ AI</h3>
+                    <p class="instructor"><i class="fa-solid fa-user-tie"></i> د. زياد فيصل</p>
+                    <div class="course-meta">
+                        <span><i class="fa-regular fa-clock"></i> 30 ساعة</span>
+                        <span><i class="fa-solid fa-star"></i> 4.8</span>
+                    </div>
+                    <div class="price">400 ج.م <span class="old-price">700 ج.م</span></div>
+                    <button class="add-to-cart" onclick="addToCart('أساسيات علم البيانات والـ AI', 400, 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500')">
+                        اشترك الآن <i class="fa-solid fa-cart-plus"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. نافذة الاشتراك والدفع بـ فودافون كاش -->
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>الكورسات المحددة للاشتراك 🎓</h3>
+                <button class="close-btn" id="close-cart-btn">&times;</button>
+            </div>
+            
+            <div class="cart-items" id="cart-items">
+                <!-- ستظهر الكورسات المختارة هنا -->
+            </div>
+
+            <div class="cart-footer">
+                <div class="total-price">
+                    <span>إجمالي الاستثمار:</span>
+                    <strong id="total-amount">0 ج.م</strong>
+                </div>
+
+                <!-- نموذج بيانات الطالب والدفع -->
+                <div class="checkout-form">
+                    <h4>بيانات المشترك والدفع</h4>
+                    <input type="text" id="customer-name" placeholder="الاسم بالكامل" required>
+                    <input type="email" id="customer-email" placeholder="البريد الإلكتروني (لتلقي رابط الكورس)" required>
+                    <input type="tel" id="customer-phone" placeholder="رقم الواتساب" required>
+
+                    <!-- تعليمات الدفع فودافون كاش -->
+                    <div class="vodafone-box">
+                        <p>برجاء تحويل المبلغ المطلوب إلى رقم المحفظة:</p>
+                        <div class="phone-number">01000000000</div>
+                        <small>* بعد التحويل، اضغط "تأكيد الاشتراك" لإرسال إيصال الدفع واستلام رابط الكورس مباشرة عبر الواتساب.</small>
+                    </div>
+
+                    <button class="btn checkout-btn" onclick="processCheckout()">تأكيد الاشتراك وإرسال الإيصال</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
